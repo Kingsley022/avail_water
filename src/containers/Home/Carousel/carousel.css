@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Quicksand&display=swap');
+.slidesContainer{
+    background: var(--background);
+    position: relative;
+    margin-top: 12vh;
+    width: 100%;
+    overflow-x: hidden;
+    height: 88vh;
+}
+.slidesContainer .slide{
+    display: none;
+}
+.slidesContainer .slide.slideActive{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 6%;
+}
+/* .......Text Area....... */
+.slidesContainer .slide .txtArea{
+    margin-top: 9rem;
+    padding-right: 10px;
+    -webkit-animation-name: textFade;
+    -webkit-animation-duration: 5s;
+    animation-name: textFade;
+    animation-duration: 5s;
+}
+.slidesContainer .slide .txtArea h1{
+    font-family: Acme;
+    word-spacing: 5px;
+    font-size: 70px;
+}
+.slidesContainer .slide .txtArea p{
+    font-family: Quicksand;
+    margin-top: 2rem;
+    font-size: 21px;
+    color: rgb(33, 32, 32);
+}
+@-webkit-keyframes textFade{
+    from { margin-left: 4rem;}
+    to {margin-left: 0;}
+}
+@keyframes textFade{
+    from { margin-left: 4rem;}
+    to {margin-left: 0;}
+}
+
+/* .......Image Area....... */
+.slidesContainer .slide .imageArea{
+    margin-top: 3rem;
+    background: #336ccb;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    -webkit-animation-name: imageFade;
+    -webkit-animation-duration: 2s;
+    animation-name: imageFade;
+    animation-duration: 5s;
+    transition: all 300ms ease;
+}
+.slidesContainer .slide .imageArea img{
+    width: 500px;
+    height: 350px;
+}
+@-webkit-keyframes imageFade{
+    from { transform: scale(.8, .8) }
+    to { transform: scale(1, 1)}
+}
+@keyframes imageFade{
+    from { transform: scale(.8, .8) }
+    to { transform: scale(1, 1)}
+}
+
+/* ......Slider Animation Begins......... */
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+@keyframes fade {
+    from { margin-left: 8rem}
+    to{ margin-left: 0}
+}
+
+/* ......Arrows....... */
+.slidesContainer .arrows {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    z-index: 1;
+}
+.slidesContainer .arrows .leftArrow, .rightArrow{
+    display: inline-block;
+    font-size: 40px;
+    position: absolute;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: .5rem;
+    color: #808080;
+    background: rgb(179, 176, 176);
+}
+.slidesContainer .arrows .rightArrow{
+    right: 0;
+}
+@media (max-width: 769px){
+    .slidesContainer .arrows {
+        opacity: 0;
+    }
+    .slidesContainer .arrows:hover {
+        opacity: 1;
+    }
+}
+.dots{
+    z-index: 8;
+    position: absolute;
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.dots .dot{
+    display: inline-block;
+    margin: 1rem;
+    padding: 5px;
+    border: 3px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 2s ease;
+}
+.dot.active{
+    border-color: var(--blue);
+}
+@media (max-width: 769px){
+    .slidesContainer{
+        height: 50vh;
+    }
+
+    .slidesContainer .slide.slideActive{
+        grid-template-columns: 1fr;
+    }
+
+    .slidesContainer .slide .imageArea{
+        display: none;
+    }
+
+    .slidesContainer .slide .txtArea{
+        margin-top: 4rem;
+        margin-left: 1.5rem;
+        text-align: left;
+        align-items: center;
+        -webkit-animation-name: textFadeMedia;
+        animation-name: textFadeMedia;
+        animation-duration: 3s;
+    }
+    .slidesContainer .slide .txtArea h1{
+        word-spacing: 3px;
+        font-size: 45px;
+    }
+    .slidesContainer .slide .txtArea p{
+        margin-top: 1.5rem;
+        font-size: 18px;
+    }
+
+    .dots{
+        bottom: 1rem;
+    }
+
+    .fade{
+        -webkit-animation-name: fade2;
+        -webkit-animation-duration: 3s;
+        animation-name: fade2;
+        animation-duration: 3s;
+    }
+    
+}
+
+@keyframes fade2 {
+    from { margin-left: 0}
+    to{ margin-left: 0}
+}
+
+@-webkit-keyframes textFadeMedia{
+    from { margin-top: 2rem;}
+    to {margin-top: 6rem;}
+}
+@keyframes textFadeMedia{
+    from { margin-top: 2rem;}
+    to {margin-top: 6rem;}
+}

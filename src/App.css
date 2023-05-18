@@ -1,0 +1,30 @@
+:root{
+  --blue: #2536ec;
+  --light-blue: #cdddfb;
+  --black: #03253e;
+  --light-color: #666;
+  --box-shadow:0 0.5rem 0.7rem #3e3d3d;
+  --border:0.2rem solid #000000;
+  --outline1: .1px solid #cac7c7;
+  --outline2: .5px solid #939393;
+  --outline-offset1: -.5rem;
+  --outline-offset2: 0;
+  --padding: 24px;
+  --background: rgba(143, 140, 140, 0.3)
+}
+
+*{
+  font-family: 'poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  overflow: none;
+  transition: all .2s linear;
+}
+p{
+  color: rgb(96, 95, 95);
+}

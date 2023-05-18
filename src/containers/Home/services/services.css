@@ -1,0 +1,54 @@
+.serviceContainer{
+    display: relative;
+}
+.serviceContainer .services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 24px 6%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.serviceContainer .services .service{
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    border-radius: 10px;
+    outline: var(--outline1);
+    outline-offset: var(--outline-offset1);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.serviceContainer .services .service:hover{
+    outline-offset: var(--outline-offset2);
+    outline: var(--outline2);
+}
+.serviceContainer .services .service img{
+    width: 230px;
+    height: 210px;
+}
+.serviceContainer .services .service p{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 0;
+}
+
+@media (max-width: 768px) {
+    .serviceContainer .services{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .serviceContainer .services .service{
+        padding: 14px;
+    }
+
+    .serviceContainer .services .service img{
+        width: 130px;
+        height: 110px;
+    }
+
+    .serviceContainer .services .service p{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,70 @@
+.waterServiceContainer{
+    position:relative;
+}
+.waterServiceContainer .services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 24px 6%;
+    gap: 1rem;
+}
+.waterServiceContainer .services .service{
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    border-radius: 10px;
+    outline: var(--outline1);
+    outline-offset: var(--outline-offset1);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+.waterServiceContainer .services .service:hover{
+    outline-offset: var(--outline-offset2);
+    outline: var(--outline2);
+}
+.waterServiceContainer .services .service img{
+    width: 230px;
+    height: 210px;
+}
+.waterServiceContainer .services .service p{
+    padding: 8px 0;
+}
+.waterServiceContainer .services .service .title, .prize{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 0;
+}
+.waterServiceContainer .services .service .description{
+    color: rgb(81, 81, 81);
+}
+.waterServiceContainer .services .service .title, .prize span{
+    font-size: 16px;
+}
+.waterServiceContainer .services .service .btns{
+    display: flex;
+    justify-content: space-around;
+}
+.waterServiceContainer .services .service .btns .cartBtn{
+    background: none;
+    color: var(--black);
+    border: 2px solid var(--black);
+}
+.waterServiceContainer .services .service .btns .cartBtn:hover{
+    border-color: var(--blue);
+    background: #e5e5f5;
+}
+
+@media (max-width: 768px) {
+    .waterServiceContainer .services{
+        overflow-x: scroll;
+        width: 100%;
+    } 
+    ::-webkit-scrollBar {
+        display: none;
+    }
+
+    .waterServiceContainer .services .service{
+        padding: 18px;
+    }
+}

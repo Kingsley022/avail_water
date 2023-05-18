@@ -1,0 +1,125 @@
+.header{
+    background: var(--background);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 12vh;
+    align-items: center;
+    padding: 12px 6%;
+    z-index: 999;
+    top: 0;
+}
+.header .logo img{
+    width: 95px;
+}
+
+.header .linksContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.header .linksContainer .links{
+    display: flex;
+    gap: 2rem;
+    font-size: 17px;
+}
+.header .linksContainer .links li{
+    padding: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+.header .linksContainer .links li .a{
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--black);
+}
+.header .linksContainer .links li:hover{
+    border-bottom: 2px solid var(--blue);
+    background: #bbc0f7;
+}
+.header .linksContainer .links li .a.active{
+    color: var(--blue)
+}
+
+
+/* ---- Icons/Button Section begins ---- */
+.header .linksContainer .iconsContainer{
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+.header .linksContainer .iconsContainer .icon{
+    padding: 8px 16px;
+    background: rgb(246, 245, 245);
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+.header .linksContainer .iconsContainer .icon span sup{
+    color: red;
+}
+.header .linksContainer .iconsContainer .icon i{
+    color: var(--black);
+    font-size: 22px;
+}
+.header .linksContainer .iconsContainer .icon:hover{
+    border: 1px solid var(--blue);
+}
+.header .linksContainer .iconsContainer .icon.active{
+    border: 1px solid var(--blue);
+}
+
+@media (max-width:768px){
+
+    .header .linksContainer .iconsContainer{
+        gap: .3rem;
+        margin-left: 2rem;
+    }
+
+    .header .linksContainer .iconsContainer .icon{
+        padding: 8px 12px;
+    }
+    
+    
+    .header .linksContainer .iconsContainer .icon span{
+        display: none;
+    }
+}
+
+/* ---- Toggle Section begins */
+.menuBtn{
+    display: inline-block;
+    padding: 5px 4px;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+    transition: .3s;
+    cursor: pointer;
+}
+.menuBtn i{
+    font-size: 28px;
+}
+
+@media (max-width:920px){
+    .header .linksContainer .links{
+      position: absolute;
+      flex-direction: column;
+      text-align: center;
+      right: -100rem;
+      margin-top: 17.87%;
+      background: #fff;
+      width: 100vw;
+      transition: all .3s ease-out;
+    }
+    .header .linksContainer .links.active{
+      right: 0;
+    }
+  
+    .header .linksContainer .links li{
+      padding: 22px;
+    }
+    .menuBtn{
+      display: block;
+    }
+  
+  }

@@ -1,0 +1,85 @@
+.cartContainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 15vh;
+    position: relative;
+}
+.cartContainer .items{
+    padding: 12px 6%;
+    position: relative;
+}
+.cartContainer .items h1{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #b8b6b6;
+}
+.cartContainer .items .item{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    align-items: center;
+    border-bottom: 1px solid #b8b6b6;
+}
+.cartContainer .items .item img{
+    width: 95px;
+}
+.cartContainer .items .item .prize span{
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+.cartContainer .items .item .btns{
+    display: flex;
+    gap: 1rem;
+}
+.cartContainer .items .item .btns .btnn{
+    font-weight: bold;
+    color: #000;
+    padding: 2px 8px;
+    background: #dddcdc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cartContainer .items .item .btns .btnn:hover{
+    background: #d1cfcf;
+}
+.cartContainer .items .item .btns .quantity{
+    font-weight: bold;
+    color: #000;
+    padding: 2px 0;
+}
+.cartContainer .items .item i{
+    font-weight: bold;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Summary */
+.summary{
+    padding: 12px 3%;
+    height: 82%;
+    width: 35%;
+    right: 0;
+    position: fixed;
+}
+.summary h1{
+    margin-bottom: 2rem;
+}
+.summary p{
+    color: #000;
+}
+.summary .totals{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.sumBtn{
+    background: #fefbfb;
+    color: #000;
+    width: 100%;
+    border: 2px solid #071d8e;
+    bottom: 0;
+}
+.sumBtn:hover{
+    background: #efeeee; 
+}
